@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Show Generator</title>
+</head>
+
+<body>
+
+    <div class="app" id="app">
+
+        <h1>Random Show Generator</h1>
+        <div class="image-poster">
+            <img class="cover" v-bind:src="cover" v-bind:alt="name">
+            <div class="poster-section">
+                <img class="poster" v-bind:src="poster" v-bind:alt="name">
+                <h2>{{name}}</h2>
+            </div>
+        </div>
+        <p>Score: {{score}}</p>
+        <p>Popularity: {{popularity}}</p>
+        <div class="summary">
+            <p> {{summary}}</p>
+
+        </div>
+
+        <p></p>
+
+        <button class="btn" v-on:click="getUser()">Get Show</button>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
